@@ -7,7 +7,7 @@ function App() {
 
     try {
       const registration = await navigator.serviceWorker.ready;
-      const applicationServerKey = 'BHAPStR6i0NCCcEIniu5t7RVjLxdKY-2WF50UyuU42xtAcauh-JZsHBHLRDxCpriFptA7_b6uY-F5SYkRPIAhzo';
+      const applicationServerKey = 'BHAPS...';
 
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
@@ -30,9 +30,9 @@ function App() {
   
   const sendSubscriptionToServer = async (subscription) => {
     try {
-      const yourAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoiZW1tYWVsdWdiYWp1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5NjUxOTE4NCwiZXhwIjoxNjk2NjA1NTg0fQ.UT_qjuLfuFT-bZkSvGMGLKUAy-Otxq02nBnWykVLf6E';
+      const yourAccessToken = 'eyJhb...';
 
-      const response = await fetch('http://localhost:8000/api/v1/admin/save-push-notification-subscription', {
+      const response = await fetch('http://...', {
         method: 'POST',
         body: JSON.stringify(subscription),
         headers: {
